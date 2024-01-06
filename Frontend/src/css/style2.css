@@ -1,0 +1,246 @@
+.pet-gallery {
+    display: flex;
+    justify-content: space-around;
+    background-color: #175bd9;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+
+}
+
+.pet-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 10px;
+    transform-style: preserve-3d;
+}
+
+.pet-card:hover {
+    transform: translate(5px, 5px) rotateX(10deg) rotateY(10deg)  ;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pet-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    background-image: linear-gradient(
+            to right bottom,
+            #ff7d00,
+            #ff005b,
+            #e70cff,
+            #8000ff,
+            #4eff00,
+            #a8ff00,
+            #fff200,
+            #ff7d00
+    );
+    background-size: 300% 300%;
+    border-radius: 10px;
+    z-index: -1;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 24% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 42% 50%;
+    }
+}
+
+
+
+.pet-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10%;
+    background-color: rgba(78, 255, 0, 0.3);
+
+}
+
+
+.pet-image img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.pet-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pet-image:hover img {
+    transform: scale(1.1);
+}
+
+.pet-image:hover::before {
+    opacity: 1;
+}
+
+
+.pet-image:hover::before {
+    opacity: 1;
+}
+
+
+.pet-image:hover img {
+    filter: grayscale(100%) contrast(1.2) brightness(1.2);
+}
+
+
+.pet-image:hover::before {
+    opacity: 1;
+}
+
+.pet-details {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+
+.pet-details h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.pet-details p {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    height: 100px; /* Adjust the height as needed */
+    width: 200px; /* Adjust the width as needed */
+
+}
+
+
+.card-mischief {
+    background-color: #f9d157;
+}
+
+.card-cuddles {
+    background-color: #86c3ff;
+}
+
+.card-mystique {
+    background-color: #ff98a5;
+}
+
+.card-mischief::before,
+.card-cuddles::before,
+.card-mystique::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0), #fff);
+    background-size: 200% 200%;
+    opacity: 0.6;
+    animation: holographicEffect 3s ease infinite;
+}
+
+@keyframes holographicEffect {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.swiper-container {
+    width: 30%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-height: 500px; /* Adjust as needed */
+    overflow: visible; /* To make overflow content scrollable */
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.swiper-slide:hover {
+    transform: scale(1.1);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+    opacity: 1;
+
+}

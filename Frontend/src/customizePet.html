@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Pet Adoption</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/monsterWrap.css">
+    <link rel="stylesheet" href="/css/customizePet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <h2>Make your own pet!</h2>
+        <p>Click and drag the different shapes to make a custom pet!</p>
+    </header>
+
+    <div id="partsDiv">
+        <img src="https://i.ibb.co/nQ6L5nk/oci1.png" id="oci1" alt="pet-part-1">
+        <img src="https://i.ibb.co/mNyxXyh/oci3.png" id="oci3" alt="pet-part-2">
+        <img src="https://i.ibb.co/9t8RCGW/oci4.png" id="oci4" alt="pet-part-3">
+        <img src="https://i.ibb.co/KG81kqh/oci5.png" id="oci5" alt="pet-part-4">
+        <img src="https://i.ibb.co/br1b72Q/oci6.png" id="oci6" alt="pet-part-5">
+        <img src="https://i.ibb.co/1MPmQkD/oci8.png" id="oci8" alt="pet-part-5">
+        <img src="https://i.ibb.co/f48DRGz/oci2.png" id="oci2" alt="pet-part-6"><br>
+        <img src="https://i.ibb.co/DQv1ndY/naocare.png" id="naocare" alt="pet-part-7">
+        <img src="https://i.ibb.co/w0WBwb8/naocare2.png" id="naocare2" alt="pet-part-8">
+        <img src="https://i.ibb.co/pXZxtW2/usta1.png" id="usta1" alt="pet-part-9">
+        <img src="https://i.ibb.co/NSKStQW/usta2.png" id="usta2" alt="pet-part-10">
+        <img src="https://i.ibb.co/r6Xx0DR/usta4.png" id="usta4" alt="pet-part-11">
+        <img src="https://i.ibb.co/LCGGKd9/usta5.png" id="usta5" alt="pet-part-12">
+        <img src="https://i.ibb.co/xmcLkX8/usta6.png" id="usta6" alt="pet-part-13">
+        <img src="https://i.ibb.co/q1DJCFy/usta7.png" id="usta7" alt="pet-part-14">
+        <img src="https://i.ibb.co/d5q0csN/usta8.png" id="usta8" alt="pet-part-15"><br>
+        <img src="https://i.ibb.co/KXGXDjP/masna.png" id="masna" alt="pet-part-16">
+        <img src="https://i.ibb.co/tM41KVp/rogovi.png" id="rogovi" alt="pet-part-17">
+        <img src="https://i.ibb.co/qg7d7kY/rogovi2.png" id="rogovi2" alt="pet-part-18">
+        <img src="https://i.ibb.co/XW6zp4D/sesir.png" id="sesir" alt="pet-part-19">
+        <img src="https://i.ibb.co/VgHwgxD/kosa.png" id="kosa" alt="pet-part-20">
+    </div>
+
+    <div id="monsterDiv">
+        <img src="https://i.ibb.co/cg8mSWg/monster3.png" id="monster1" draggable="false" alt="monster-1">
+        <img src="https://i.ibb.co/tcytcpj/monster2.png" id="monster2" draggable="false" alt="monster-2">
+        <img src="https://i.ibb.co/cgW8dLH/monster4.png" id="monster3" draggable="false" alt="monster-3">
+    </div>
+        <form id="adopt-form2">
+            <input type="hidden" id="attire" value=" ">
+            <button id="adopt-pet-btn2" type="submit">Adopt Pet!</button>
+        </form>
+    <input type="button" id="reset-btn" class="btn" value="Reset">
+</div>
+
+<!-- Pet Reviews Section -->
+<section class="reviews">
+    <h3>Pet Reviews</h3>
+    <div id="review-list" class="review-list">
+        <!-- Reviews will be dynamically added here -->
+    </div>
+
+    <!-- Review Form -->
+    <div class="review-form">
+        <h4>Leave a Review</h4>
+        <form id="review-form">
+            <div class="form-group">
+                <label for="review-author">Name:</label>
+                <input type="text" id="review-author" required>
+            </div>
+            <div class="form-group">
+                <label for="review-rating">Rating:</label>
+                <select id="review-rating" required>
+                    <option value="5">5 stars</option>
+                    <option value="4">4 stars</option>
+                    <option value="3">3 stars</option>
+                    <option value="2">2 stars</option>
+                    <option value="1">1 star</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="review-content">Review:</label>
+                <textarea id="review-content" rows="4" required></textarea>
+            </div>
+            <button id="submit-review-btn" type="submit">Submit Review</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2023 PetConnect. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript files -->
+<script src="customizePetPage.js"></script>
+
+</body>
+</html>
