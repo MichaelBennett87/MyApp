@@ -1,0 +1,62 @@
+Resources:
+  PetTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: "PetId"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "PetId"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TableName: "Pet"
+
+  UserTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: "Id"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "Id"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      TableName: "User"
+
+      ReviewTable:
+        Type: AWS::DynamoDB::Table
+        Properties:
+          AttributeDefinitions:
+            - AttributeName: "reviewId"
+              AttributeType: "S"
+            - AttributeName: "petId"
+              AttributeType: "S"
+            - AttributeName: "reviewDate"
+              AttributeType: "S"
+            - AttributeName: "ownerId"
+              AttributeType: "S"
+            - AttributeName: "review"
+              AttributeType: "S"
+            - AttributeName: "rating"
+              AttributeType: "s"
+
+        KeySchema:
+          - AttributeName: "reviewId"
+            KeyType: "HASH"
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: "ReviewTable"
+        lobalSecondaryIndexes:
+          - IndexName:
+            KeySchema:
+              - AttributeName:
+                KeyType:
+            Projection:
+              ProjectionType: ALL
+        BillingMode: PAY_PER_REQUEST
+
